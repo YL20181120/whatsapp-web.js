@@ -246,6 +246,16 @@ class Chat extends Base {
         }, this.id._serialized);
     }
 
+
+    /**
+     * Returns the chat/group/community profile picture URL, if a client can retrieve it
+     * @returns {Promise<string>}
+     */
+    async getProfilePicUrl() {
+        return this.client.getProfilePicUrl(this.id._serialized);
+    }
+
+    
     /**
      * Returns the Contact that corresponds to this Chat.
      * @returns {Promise<Contact>}
